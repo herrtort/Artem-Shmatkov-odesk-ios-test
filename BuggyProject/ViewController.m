@@ -40,7 +40,11 @@
 }
 
 - (IBAction)secondBug:(id)sender {
-	NSInteger x = 123;
+    // Bug#2
+	// NSInteger x = 123;
+    
+    // FIX:
+    __block NSInteger x = 123;
 	void (^printX)() = ^() {
 		NSLog(@"%i", x);
 	};
