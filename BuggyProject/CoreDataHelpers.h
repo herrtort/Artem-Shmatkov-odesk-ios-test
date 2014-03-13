@@ -12,6 +12,7 @@
 + (BOOL)saveCurrentContext;
 + (NSFetchRequest *)fetchRequestWithName: (NSString *)name;
 + (NSArray *)arrayForFetchRequestWithName: (NSString *)name;
++ (NSArray *)arrayForFetchRequestWithName: (NSString *)name withSortDescriptorsArray:(NSArray *)sortDescriptorsArray;
 
 + (void)fillUnsortedData;
 + (void)fillSortedData;

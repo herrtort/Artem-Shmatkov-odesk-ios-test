@@ -76,7 +76,14 @@
 
 - (IBAction)fifthBug:(id)sender {
 	[CoreDataHelpers fillUnsortedData];
-	NSArray *models = [CoreDataHelpers arrayForFetchRequestWithName:@"AllModels"];
+    
+    // Bug#5
+    // NSArray *models = [CoreDataHelpers arrayForFetchRequestWithName:@"AllModels"];
+    // FIX:
+    NSSortDescriptor *sortDescriptorOwner = [[NSSortDescriptor alloc] initWithKey:@"owner.ownerName" ascending:YES];
+    NSSortDescriptor *sortDescriptorModel = [[NSSortDescriptor alloc] initWithKey:@"modelName" ascending:YES];
+    NSArray *descriptorsArray = [NSArray arrayWithObjects:sortDescriptorOwner, sortDescriptorModel, nil];
+	NSArray *models = [CoreDataHelpers arrayForFetchRequestWithName:@"AllModels" withSortDescriptorsArray:descriptorsArray];
 	NSLog(@"%@", models);
 }
 
