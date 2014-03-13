@@ -60,7 +60,10 @@
 
 - (IBAction)fourthBug:(id)sender {
 	static NSInteger count = 1;
-	if (count>1) {
+    // Bug#4
+    // if (count>1) {
+    // FIX:
+    if (count>=1) {
 		[CoreDataHelpers cleanData];
 	}
 	
