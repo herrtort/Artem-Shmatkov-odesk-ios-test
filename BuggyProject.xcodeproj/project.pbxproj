@@ -407,6 +407,7 @@
 				GCC_PREFIX_HEADER = "BuggyProject/BuggyProject-Prefix.pch";
 				INFOPLIST_FILE = "BuggyProject/BuggyProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -420,6 +421,7 @@
 				GCC_PREFIX_HEADER = "BuggyProject/BuggyProject-Prefix.pch";
 				INFOPLIST_FILE = "BuggyProject/BuggyProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -485,6 +487,7 @@
 				A3FB6EDA18C5F0B500F3E7D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3FB6EDB18C5F0B500F3E7D8 /* Build configuration list for PBXNativeTarget "BuggyProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +496,7 @@
 				A3FB6EDD18C5F0B500F3E7D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

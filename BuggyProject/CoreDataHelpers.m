@@ -55,6 +55,22 @@
 	return result;
 }
 
++ (NSArray *)arrayForFetchRequestWithName: (NSString *)name withSortDescriptorsArray:(NSArray *)sortDescriptorsArray {
+	NSFetchRequest *request = [[CoreDataHelpers fetchRequestWithName:name] copy];
+    [request setSortDescriptors:sortDescriptorsArray];
+    
+	NSManagedObjectContext *context = [CoreDataHelpers currentContext];
+	
+	NSError *error = nil;
+	NSArray *result = [context executeFetchRequest:request error:&error];
+	if (error) {
+		result = [NSArray array];
+		NSLog(@"%@", [error localizedFailureReason]);
+	}
+	
+	return result;
+}
+
 + (void)fillUnsortedData {
 	NSManagedObjectContext *context = [CoreDataHelpers currentContext];
 	

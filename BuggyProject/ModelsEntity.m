@@ -14,4 +14,11 @@
 @dynamic modelId;
 @dynamic owner;
 
+// Bug#3 fix
+// Overriding description method
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"%@; %@", self.modelName, self.owner.ownerName];
+}
+
 @end
